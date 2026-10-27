@@ -8,15 +8,16 @@
       "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-500: oklch(63.7% 0.237 25.331);
+    --color-red-950: oklch(25.8% 0.092 26.042);
     --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-blue-950: oklch(28.2% 0.091 267.935);
     --color-neutral-50: oklch(98.5% 0 none);
+    --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
-    --text-xl: 1.25rem;
-    --text-xl--line-height: calc(1.75 / 1.25);
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
     --text-7xl: 4.5rem;
@@ -188,12 +189,6 @@
   .h-dvh {
     height: 100dvh;
   }
-  .w-1 {
-    width: var(--spacing);
-  }
-  .w-10 {
-    width: calc(var(--spacing) * 10);
-  }
   .w-100 {
     width: calc(var(--spacing) * 100);
   }
@@ -221,9 +216,6 @@
   .gap-5\.5 {
     gap: calc(var(--spacing) * 5.5);
   }
-  .rounded {
-    border-radius: 0.25rem;
-  }
   .rounded-4xl {
     border-radius: var(--radius-4xl);
   }
@@ -231,11 +223,20 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .bg-black {
+    background-color: var(--color-black);
+  }
   .bg-blue-500 {
     background-color: var(--color-blue-500);
   }
   .bg-blue-950 {
     background-color: var(--color-blue-950);
+  }
+  .bg-red-500 {
+    background-color: var(--color-red-500);
+  }
+  .bg-red-950 {
+    background-color: var(--color-red-950);
   }
   .p-2 {
     padding: calc(var(--spacing) * 2);
@@ -265,6 +266,9 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
+  .text-black {
+    color: var(--color-black);
+  }
   .text-blue-500 {
     color: var(--color-blue-500);
   }
@@ -284,6 +288,9 @@
   @media (hover: hover) {
     .hover\:text-blue-500:hover {
       color: var(--color-blue-500);
+    }
+    .hover\:text-red-500:hover {
+      color: var(--color-red-500);
     }
   }
   @media (width >= 48rem) {
